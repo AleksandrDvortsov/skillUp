@@ -150,8 +150,16 @@ header ul li a:hover{
     margin: 0 0 5px 0;
 }
 
-
-
+footer{
+    background: red;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    padding: 15px;
+}
 
 
 
