@@ -15,15 +15,15 @@
     src: local('Bebas Neue Book'), local('BebasNeueBook'), url('bebasneuebook.woff2') format('woff2'), url('bebasneuebook.woff') format('woff'), url('bebasneuebook.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
-}
-@font-face {
-    font-family: 'Bebas Neue';
-    src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url('bebasneueregular.woff2') format('woff2'), url('bebasneueregular.woff') format('woff'), url('bebasneueregular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
 } */
 @font-face {
-    font-family: 'bebasbold';
+    font-family: 'bebasbold400';
+    src: local('Bebas Neue Regular'), local('BebasNeueRegular'), url('fonts/bebasneue/bebasneueregular.woff2') format('woff2'), url('fonts/bebasneue/bebasneueregular.woff') format('woff'), url('fonts/bebasneue/bebasneueregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+} 
+@font-face {
+    font-family: 'bebasbold700';
     src: local('Bebas Neue Bold'), local('BebasNeueBold'), url('fonts/bebasneue/bebasneuebold.woff2') format('woff2'), url('fonts/bebasneue/bebasneuebold.woff') format('woff'), url('fonts/bebasneue/bebasneuebold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
@@ -53,6 +53,8 @@ a {
 
 #header-top, #header-nav ul {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 #header-top {
@@ -79,7 +81,7 @@ a {
 }
 
 #cart span {
-    font-family: 'bebasbold';
+    font-family: 'bebasbold700';
     color: #a1a1a1;
     font-size: 30px;
     position: relative;
@@ -87,6 +89,74 @@ a {
     padding-left: 5px;
 }
 
+#header-nav {
+    background: #4ccfc1;
+    padding: 10px 0;
+}
+
+#header-nav ul li a{
+    border-right: 2px solid #fff;
+    padding: 0 20px;
+    color: #fff;
+    font-family: 'bebasbold700';
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+#header-nav ul li:first-child a {
+    padding-left: 0;
+}
+
+#header-nav ul li:last-child a {
+    border-right: none;
+    padding-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1000px) { 
+    #header-top {
+        margin: 0 15px;
+    }
+
+    #header-nav {
+        padding: 0 15px;
+    }
+
+    #header-nav ul li a {
+        border: none;
+        padding: 0 10px;
+    }
+    
+    #header-nav ul li{
+        margin: 5px;
+    }
+}
+
+@media(max-width: 780px) {
+
+    #header-top, #header-nav ul {
+        justify-content: center;
+    }
+
+    #header-top {
+        flex-direction: column;
+    }
+
+    #search {
+        margin: 15px;
+        width: 75%;
+    }
+   
+}
 
 
 
