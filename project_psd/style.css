@@ -120,6 +120,7 @@ a {
     display: flex;
     padding: 70px 0 50px 0;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .slide-text {
@@ -146,7 +147,8 @@ a {
     font-family: 'bebasbold700'; 
     border-radius: 5px;
     font-size: 18px;
-    padding: 5px 15px 1px 15px;
+    padding: 10px 20px 7px 20px;
+
 }
 
 
@@ -188,5 +190,16 @@ a {
    
 }
 
+@media(max-width: 600px) { 
+    #slider {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    #slider h2 {
+        margin: 15px;
+    }
+
+}
 
 
