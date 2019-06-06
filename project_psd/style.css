@@ -112,12 +112,44 @@ a {
     padding-right: 0;
 }
 
+.slider-bg {
+    background: #41c6c4;
+}
 
+#slider {
+    display: flex;
+    padding: 70px 0 50px 0;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.slide-text {
+    color: white;
+    max-width: 420px;
+}
 
+.slide-text h2 {
+    font-family: 'bebasbold400';
+    font-size: 65px;
+    margin: 0;
+}
 
+.slide-text p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 17px;
+}
 
+.slide-text button {
+    color: white;
+    background: none;
+    text-transform: uppercase;
+    border: 2px solid white;
+    font-family: 'bebasbold700'; 
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px 20px 7px 20px;
 
+}
 
 
 
@@ -158,5 +190,16 @@ a {
    
 }
 
+@media(max-width: 600px) { 
+    #slider {
+        padding: 15px;
+        text-align: center;
+    }
+    
+    #slider h2 {
+        margin: 15px;
+    }
+
+}
 
 
