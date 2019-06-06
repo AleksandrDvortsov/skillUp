@@ -246,7 +246,14 @@ a {
         margin: 15px;
         width: 75%;
     }
-   
+
+    .f-block {
+        width: 50%;
+    }
+    
+    .featured-bg {
+        margin: 15px 0;
+    }
 }
 
 @media(max-width: 600px) { 
