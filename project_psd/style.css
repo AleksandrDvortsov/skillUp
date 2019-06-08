@@ -205,13 +205,46 @@ a {
     cursor: pointer;
 }
 
+.footer-top-bg {
 
+    background: #4ccfc1;
+    padding: 0 15px;
+    text-transform: uppercase; 
+    color: white;
+    font-family: 'bebasbold700';
+}
 
+#footer-top {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+#footer-top h2{
+    margin: 15px 0;
+    font-size: 30px;
+}
 
+#footer-top a{
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: block;
+}
 
+#footer-top ul li:last-child a {
+    margin: 0;
+}
 
+#footer-bottom {
+    background: #41c6c4;
+    text-align: center;
+    padding: 15px 0;
+}
 
+#footer-bottom a {
+    color: white;
+}
 
 @media(max-width: 1000px) { 
     #header-top {
