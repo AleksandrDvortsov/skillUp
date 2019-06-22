@@ -1,0 +1,17 @@
+#form1, #form2, #form3, #allInfo {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    border: 2px solid blue;
+    padding: 5px;
+    margin: 5px;
+}
+#city1 {
+    background: rgb(177, 177, 177);
+}
+#city2 {
+    background: rgb(161, 161, 161);
+}
+#formBlock1, #formBlock2, #formBlock3, #allInfo {
+    display: none;
+}

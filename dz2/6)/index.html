@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dz 6</title>
+    <link href="style.css" rel="stylesheet">
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <div id="formBlock1">
+        <div id="form1">
+            <input type="text" id="fName">Имя
+            <input type="text" id="lName">Фамилия
+            <button type="button" onclick="next1()">Далее</button>
+        </div>
+    </div>
+    
+    <div id="formBlock2">
+        <div id="form2">
+                <input type="text" id="phone">Номер телефона (+3)
+                <input type="text" id="hobby">Хобби
+                <button type="button" onclick="next2()">Далее</button>
+        </div>
+    </div>
+
+    <div id="formBlock3">
+        <div id="form3">
+                <input type="text" id="location">Место проживания
+                <input type="text" id="passport">Паспортные данные
+                <input type="text" id="iNN">ИНН
+                <button type="button" onclick="next3()">Далее</button>
+        </div>
+    </div>
+
+    <div id="allInfo">
+        <p id="infoFName"></p>
+        <p id="infoLName"></p>
+        <p id="infoPhone"></p>
+        <p id="infoHobby"></p>
+        <p id="infoLocation"></p>
+        <p id="infoPassport"></p>
+        <p id="infoINN"></p>
+        <button type="button" onclick="push()">Отправить информацию</button>
+    </div>
+
+</body>
+</html>

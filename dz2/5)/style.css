@@ -1,0 +1,9 @@
+#city1 li, #city2 li {
+    display: flex;
+}
+#city1 {
+    background: rgb(177, 177, 177);
+}
+#city2 {
+    background: rgb(161, 161, 161);
+}

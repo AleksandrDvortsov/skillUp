@@ -1,0 +1,21 @@
+body {
+    background: gray;
+}
+
+#cont{
+    display: flex;
+    height: 720px;
+    border: 1px solid greenyellow;
+    justify-content: center;
+    align-items: center;
+}
+
+#block {
+    width: 200px;
+    height: 200px;
+    border: 2px solid red;
+    justify-content: center;
+   
+}
+
+
