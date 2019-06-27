@@ -33,7 +33,7 @@ function creater(arr, block) {
     var html = '';
         
     for (var ob of arr) {
-        html += `<li">${ob}</li>`
+        html += `<li>${ob}</li>`
     }
     block.innerHTML = html;
 }
