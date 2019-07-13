@@ -29,9 +29,12 @@ function createPerson(count) {
     var li = document.createElement('li');
 
     li.appendChild(document.createTextNode(arrPerson[count]));
-    li.addEventListener('click',function(e){
+    li.onclick = function (e) {
         alert(e.target.innerHTML)
-    });
+    }
+    // li.addEventListener('click',function(e){
+    //     alert(e.target.innerHTML)
+    // });
 
     list.appendChild(li);
     document.getElementById("person").appendChild(list);

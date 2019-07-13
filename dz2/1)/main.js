@@ -9,8 +9,8 @@ function createPerson() {
         var li = document.createElement('li');
 
         li.appendChild(document.createTextNode(arr[i]));
-        li.addEventListener('click',function(e){
-            alert(e.target.innerHTML)
+        li.addEventListener('click',function(){
+            alert(this.innerHTML )
          });
 
         list.appendChild(li);
