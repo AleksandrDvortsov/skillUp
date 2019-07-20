@@ -62,3 +62,36 @@ function rightClick() {
     },100);
 }
 
+
+
+
+function XXX () {
+   
+    this.init = function() {
+        this.btn = document.getElementById('btnR');
+        this.btn.onclick = this.redraw;
+    }
+    // console.log(this.btn);
+    this.right = function() {
+        this.redraw;
+        // this.redraw(document.getElementById('cont').style.paddingLeft, '1083px',countR,countL,document.getElementById('cont').style.paddingLeft,document.getElementById('cont').style.paddingRight = countR);
+    }
+    this.redraw = function(if1, if2, count1, count2, el1, el2) {
+        alert('33')
+        let xz = setInterval(function() {
+            console.log(this);
+            if(if1 === if2){
+                clearTimeout(xz);
+                return;
+            }
+            count1 -= 5;
+            count2 += 5;
+            el1 = countL + 'px';
+            el2 = countR + 'px';
+        }.bind(this),100)
+    }
+    
+    this.init();
+}
+
+let x = new XXX();
