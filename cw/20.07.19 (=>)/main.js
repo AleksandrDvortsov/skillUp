@@ -57,9 +57,29 @@ const user = names2.find(e => e.id === '1');
 console.log(user);
 // -- //
 
+// function filter //
+const namesSort = [
+    {id: "0", name: "vase", age: 30}, 
+    {id: "1",name: "vase2", age: 25},
+    {id: "2",name: "vase3", age: 42}
+];
+const userSort = namesSort.filter(e => e.age <= 32);
+console.log(userSort);
+// -- //
 
+// function reduce //
+const namesReduce = [
+    {id: "0", name: "vase", age: 30}, 
+    {id: "1",name: "vase2", age: 25},
+    {id: "2",name: "vase3", age: 42}
+];
 
-
+const userReduce = namesReduce.reduce((acc, el) => {
+    acc += el.age;
+    return acc;
+}, 0);
+console.log(userReduce);
+// -- //
 
 
 
