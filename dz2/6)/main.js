@@ -1,60 +1,73 @@
 
 document.getElementById('formBlock1').style.display = 'block';
-var firstName;
-var lastName;
-var phone;
-var hobby;
-var loc;
-var passport;
-var iNN;
 
-function next1() {
-    firstName = document.getElementById('fName').value;
-    lastName = document.getElementById('lName').value;
+function Form() {
+    this.init = function() {
+        this.firstName;
+        this.lastName;
+        this.phone;
+        this.hobby;
+        this.loc;
+        this.passport;
+        this.iNN;
 
-    if(!firstName || !lastName ){
-        alert('Заполните все поля');
-        return;
+        this.btnN1 = document.getElementById('btnN1');
+        this.btnN2 = document.getElementById('btnN2');
+        this.btnN3 = document.getElementById('btnN3');
+        this.btnPush = document.getElementById('btnPush');
+        this.btnN1.onclick = this.block1;
+        this.btnN2.onclick = this.block2;
+        this.btnN3.onclick = this.block3;
+        this.btnPush.onclick = this.push;
     }
-    document.getElementById('formBlock1').style.display = 'none';
-    document.getElementById('formBlock2').style.display = 'block';
-}
+    this.block1 = ()=> {
+        this.firstName = document.getElementById('fName').value;
+        this.lastName = document.getElementById('lName').value;
 
-function next2() {
-    phone = document.getElementById('phone').value;
-    hobby = document.getElementById('hobby').value;
-
-    if(!phone || !hobby ){
-        alert('Заполните все поля');
-        return;
+        if(!this.firstName || !this.lastName ){
+            alert('Заполните все поля');
+            return;
+        }
+        document.getElementById('formBlock1').style.display = 'none';
+        document.getElementById('formBlock2').style.display = 'block';
     }
-    document.getElementById('formBlock2').style.display = 'none';
-    document.getElementById('formBlock3').style.display = 'block';
-}
+    this.block2 = ()=> {
+        this.phone = document.getElementById('phone').value;
+        this.hobby = document.getElementById('hobby').value;
 
-function next3() {
-    loc = document.getElementById('location').value;
-    passport = document.getElementById('passport').value;
-    iNN = document.getElementById('iNN').value;
-
-    if(!loc || !passport || !iNN ){
-        alert('Заполните все поля');
-        return;
+        if(!this.phone || !this.hobby ){
+            alert('Заполните все поля');
+            return;
+        }
+        document.getElementById('formBlock2').style.display = 'none';
+        document.getElementById('formBlock3').style.display = 'block';
     }
-    document.getElementById('formBlock3').style.display = 'none';
-    document.getElementById('allInfo').style.display = 'block';
-    allInfo();
+    this.block3 = ()=> {
+        this.loc = document.getElementById('location').value;
+        this. passport = document.getElementById('passport').value;
+        this.iNN = document.getElementById('iNN').value;
+
+        if(!this.loc || !this.passport || !this.iNN ){
+            alert('Заполните все поля');
+            return;
+        }
+        document.getElementById('formBlock3').style.display = 'none';
+        document.getElementById('allInfo').style.display = 'block';
+        this.allInfo();
+    }
+    this.allInfo = () => {
+        document.getElementById('infoFName').innerText = this.firstName;
+        document.getElementById('infoLName').innerText = this.lastName;
+        document.getElementById('infoPhone').innerText = this.phone;
+        document.getElementById('infoHobby').innerText = this.hobby;
+        document.getElementById('infoLocation').innerText = this.loc;
+        document.getElementById('infoPassport').innerText = this.passport;
+        document.getElementById('infoINN').innerText = this.iNN;
+    }
+    this.push = () => {
+        alert('Операция успешна');
+    }
+    this.init();
 }
 
-function allInfo() {
-    document.getElementById('infoFName').innerText = firstName;
-    document.getElementById('infoLName').innerText = lastName;
-    document.getElementById('infoPhone').innerText = phone;
-    document.getElementById('infoHobby').innerText = hobby;
-    document.getElementById('infoLocation').innerText = loc;
-    document.getElementById('infoPassport').innerText = passport;
-    document.getElementById('infoINN').innerText = iNN;
-}
-function push() {
-    alert('Операция успешна');
-}
+let form = new Form();
