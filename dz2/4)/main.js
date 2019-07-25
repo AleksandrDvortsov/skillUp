@@ -1,9 +1,7 @@
 function Animation() {
   this.init = () => {
-    this.countT = 155;
-    this.countB = 155;
-    this.countL = 575;
-    this.countR = 575;
+    this.countT = this.countB = 155;
+    this.countL = this.countR = 100;
 
     this.btnT = document.getElementById("btnT");
     this.btnT.onclick = this.top;
@@ -50,8 +48,7 @@ function Animation() {
           this.countT += 5;
           break;
         case "right":
-          let num = parseInt(document.getElementById("cont").style.paddingLeft);
-          if (num >= window.innerWidth - 220 && num != NaN) {
+          if (document.getElementById("cont").style.paddingLeft === "200px") {
             clearTimeout(draw);
             return;
           }
