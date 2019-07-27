@@ -29,18 +29,19 @@ function render(photos) {
 }
 
 function xz (a,b){
-    return (a*a) + (b*b);
+    console.log ((a**2) + (b**2));
 }
 
 function xz1 () {
     let count = 0;
     for (const iterator of arguments) {
-        count += iterator*iterator;
+        count += iterator**2;
     }
     console.log(count);
 }
 
 xz1(3,3,3);
+xz(3,3)
 
 
 var arr1 = [1,2,5];
