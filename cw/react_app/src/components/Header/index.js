@@ -2,11 +2,12 @@ import React from 'react';
 import Menu from '../Menu';
 import './style.scss'
 
-function Header() {
+function Header(props) {
+    const {changePage} = props;
     return (
         <div id="header">
             <span>Header</span>
-            <Menu />
+            <Menu changePage = {changePage} />
         </div>
     )
 }

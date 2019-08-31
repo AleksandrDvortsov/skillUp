@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+#app {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.page{
+    min-height: 800px;
+}
+.page, #header, #footer {
+    box-shadow: 0 0px 3px 1px #000000ad;
+}
