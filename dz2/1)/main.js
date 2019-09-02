@@ -3,27 +3,28 @@ var arr2 = ['Vasia2', 'Petia2', 'Alex2', 'Ivan2'];
 
 function CreatePerson(arr, id) {
     this.ar = arr;
-    
-    this.init = function() {
+
+    this.init = function () {
         this.list = document.createElement('ul');
         this.create();
         this.render();
     }
 
-    this.create = function() {
-        for(let i = 0; i < this.ar.length; i++) {
+    this.create = function () {
 
+        this.ar.map((name) => {
             let li = document.createElement('li');
-    
-            li.appendChild(document.createTextNode(this.ar[i]));
-             li.onclick = function () {
-                alert(this.innerHTML );
-             }
-             this.list.appendChild(li);
-        }
+
+            li.appendChild(document.createTextNode(name));
+            li.onclick = function () {
+                alert(this.innerHTML);
+            }
+            this.list.appendChild(li);
+        })
+
     }
 
-    this.render = function() {
+    this.render = function () {
         document.querySelector(id).appendChild(this.list);
     }
 

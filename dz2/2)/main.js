@@ -63,4 +63,4 @@ function CreatePerson(blockNav, id) {
 
 let block = new CreatePerson("#nav", "#person");
 
-let block2 = new CreatePerson("#nav2", "#person2");
+// let block2 = new CreatePerson("#nav2", "#person2");
