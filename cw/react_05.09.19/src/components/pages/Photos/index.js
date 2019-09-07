@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
 import { listPhotos } from './service';
 import ListPhoto from './components/ListPhoto'
 import './style.scss';
 
-function Photos() {
-    const [photos, changePhotos] = useState([]);
+function Photos(props) {
+
+    const{photos} = props;
 
     useEffect(() => {
-        listPhotos()
-           .then((data) => {
-                console.log(data);
-                changePhotos(data);
-            });
+        // listPhotos()
+        //    .then((data) => {
+        //         console.log(data);
+        //         changePhotos(data);
+        //     });
         
     }, []);
 
@@ -25,4 +27,15 @@ function Photos() {
     )
 }
 
-export default Photos;
+const mapDispatchToProps = dispatch => {
+
+}
+
+const mapStateToProps = state => {
+
+    return {
+        photos: state.photos.dataPhotos,
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Photos);
