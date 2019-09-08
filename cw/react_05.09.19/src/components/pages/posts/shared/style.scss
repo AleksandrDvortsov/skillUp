@@ -1,15 +1,14 @@
-#photos {
+.post-theme {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    
 
-    .photo{
+    .post {
         width: 29%;
         border: 1px solid #656565;
         margin: 15px;
-        padding: 15px;
         text-align: center;
+        padding: 15px;
         box-sizing: border-box;
         position: relative;
 
@@ -22,5 +21,4 @@
             top: 5px;
         }
     }
-
 }

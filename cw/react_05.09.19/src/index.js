@@ -2,17 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { BrowserRouter } from 'react-router-dom';
+import reducer from  './system/reducer';
 
 import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import reducer from './system/reducer';
+
 
 const store = createStore(reducer, composeWithDevTools());
 
 ReactDOM.render(
-    <Provider store = {store}>
+    <Provider store={store}>
         <BrowserRouter>
             <App />
         </BrowserRouter>

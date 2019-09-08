@@ -1,8 +1,9 @@
 import {
     BASE_URL,
-} from '../../../system/settings';
+    CLIENT_ID,
+} from '../../../../system/settings';
 
-export const listPhotos = () => {
+export const listPosts = () => {
 
     const url = `${BASE_URL}`;
 
@@ -11,9 +12,9 @@ export const listPhotos = () => {
     });
 }
 
-export const likePhoto = (photo, like) => {
+export const likePost = (photo, like) => {
 
-    const url = `${BASE_URL}`;
+    const url = `${BASE_URL}${photo.id}/like/?client_id=${CLIENT_ID}`;
 
     return fetch(url, {
         method: 'POST',
