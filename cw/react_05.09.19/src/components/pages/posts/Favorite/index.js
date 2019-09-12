@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
 import List from '../shared/components/List';
@@ -9,8 +9,10 @@ function Favorite(props) {
     const { posts } = props;
 
     return (
-        <div className='post-theme' id = 'favorite'>
-            <List posts={posts} />
+        <div className="post-theme" id="favorite">
+            <List
+                posts={posts}
+            />
         </div>
     )
 }

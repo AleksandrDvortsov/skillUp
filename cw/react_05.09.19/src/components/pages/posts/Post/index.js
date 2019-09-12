@@ -7,37 +7,37 @@ import '../shared/style.scss';
 
 function Posts(props) {
 
-    const { 
-        posts, 
-        setPostsAction, 
-        addToFavorite 
+    const {
+        posts,
+        setPostsAction,
+        addFavoriteAction
     } = props;
 
     useEffect(() => {
         listPosts()
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setPostsAction(data);
             });
     }, []);
 
     return (
-        <div className='post-theme' id="posts">
-            <List 
-            posts={posts} 
-            addToFavorite={addToFavorite} 
+        <div className="post-theme" id="posts">
+            <List
+                posts={posts}
+                addFavorite={addFavoriteAction}
             />
         </div>
     )
 }
 
 const mapDispatchToProps = dispatch => {
-    return { 
+    return {
         setPostsAction: dataPosts => {
-            dispatch({type: 'SET_POSTS', dataPosts});
+            dispatch({ type: 'SET_POSTS', dataPosts });
         },
-        addToFavorite: posts => {
-            dispatch({type: 'ADD_FAVORITE', posts});
+        addFavoriteAction: post => {
+            dispatch({ type: 'ADD_FAVORITE', post });
         }
     }
 }

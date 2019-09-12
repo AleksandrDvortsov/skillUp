@@ -4,7 +4,7 @@ import './style.scss';
 function Footer() {
     return (
         <div id="footer">
-            <span>Developer Alex Dvortsov 2019</span>
+            <span>Developer Alex Axenov 2019</span>
         </div>
     )
 }

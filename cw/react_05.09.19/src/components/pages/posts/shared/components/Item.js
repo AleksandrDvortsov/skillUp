@@ -7,19 +7,17 @@ function Item(props) {
         description,
         likes,
         user,
-        id,
         data_create,
         data_update,
     } = props.post;
 
-    const { addToFavorite, post } = props;
-    
+    const { addFavorite, post } = props;
 
     const add = () => {
-        
-        addToFavorite(post);
+        addFavorite(post);
     }
-    const checkbox = addToFavorite ? <input onClick = { add } type="checkbox" /> : '';
+
+    const checkbox = addFavorite ? <input onClick={add} type="checkbox" /> : '';
 
     return (
         <div className="post">
