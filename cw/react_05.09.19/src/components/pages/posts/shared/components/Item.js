@@ -9,15 +9,30 @@ function Item(props) {
         user,
         data_create,
         data_update,
+        checkFavorite,
+        id
     } = props.post;
 
-    const { addFavorite, post } = props;
+    const { 
+        addFavorite, 
+        removeFavorite, 
+        changePostStats, 
+        post 
+    } = props;
 
-    const add = () => {
-        addFavorite(post);
+    const changeHandler = (e) => {
+        const check = e.target.checked;
+        if(check) {
+            addFavorite(post);
+            changePostStats(id);
+        }
+        else {
+            changePostStats(id);
+            removeFavorite(id)
+        }
     }
 
-    const checkbox = addFavorite ? <input onClick={add} type="checkbox" /> : '';
+    const checkbox = addFavorite ? <input defaultChecked={checkFavorite} onClick={changeHandler} type="checkbox" /> : '';
 
     return (
         <div className="post">

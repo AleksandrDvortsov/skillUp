@@ -10,7 +10,9 @@ function Posts(props) {
     const {
         posts,
         setPostsAction,
-        addFavoriteAction
+        addFavoriteAction,
+        removeFavoriteAction,
+        changePostStatsAction
     } = props;
 
     useEffect(() => {
@@ -24,8 +26,10 @@ function Posts(props) {
     return (
         <div className="post-theme" id="posts">
             <List
-                posts={posts}
-                addFavorite={addFavoriteAction}
+                posts = {posts}
+                addFavorite = {addFavoriteAction}
+                removeFavorite = {removeFavoriteAction}
+                changePostStats = {changePostStatsAction}
             />
         </div>
     )
@@ -38,6 +42,12 @@ const mapDispatchToProps = dispatch => {
         },
         addFavoriteAction: post => {
             dispatch({ type: 'ADD_FAVORITE', post });
+        },
+        removeFavoriteAction: id => {
+            dispatch({ type: 'REMOVE_FAVORITE', id });
+        },
+        changePostStatsAction: id => {
+            dispatch({ type: 'CHANGE_POST_STATUS', id });
         }
     }
 }
