@@ -5,7 +5,8 @@ function List({
     posts, 
     addFavorite, 
     removeFavorite, 
-    changePostStats 
+    changePostStats,
+    likPost 
 }) {
     return posts.map(post =>
         <Item
@@ -14,6 +15,7 @@ function List({
             addFavorite = {addFavorite}
             removeFavorite = {removeFavorite}
             changePostStats = {changePostStats}
+            likPost = {likPost}
         />
     );
 }
